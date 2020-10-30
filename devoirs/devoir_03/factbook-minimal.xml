@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-model href="factbook-minimal.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+
+<mondial>
+    <continent id="cont01" name="Europe"/>
+        <country id="count01" name="France" gdp_agri="7232.00 EUR Million" gdp_total="44317">
+            <name></name>
+            <city longitude="2.3488" latitude="48.8534">
+                <name>Paris</name>
+                <population xmlns="inalco:documents-structures:ns">2148327</population>
+                <located_at></located_at>
+            </city>
+            <city longitude="7.1557" latitude="41.4211">
+                <name>Nice</name>
+                <population xmlns="inalco:documents-structures:ns">342522</population>
+            </city>
+        </country>
+        <country id="count02" name="Russia" gdp_agri="601.70 RUB Billion" gdp_total="12011">
+            <name></name>
+            <city longitude="60.583332" latitude="56.833332">
+                <name>Yekaterinburg</name>
+                <population xmlns="inalco:documents-structures:ns">1444439</population>
+            </city>
+            <city longitude="61.2334" latitude="56.4510">
+                <name>Beloyarskiy</name>
+                <population xmlns="inalco:documents-structures:ns">11499</population>
+            </city>
+        </country>
+</mondial>

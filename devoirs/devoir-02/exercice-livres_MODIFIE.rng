@@ -1,0 +1,51 @@
+<element name="bibliotheque" xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    <oneOrMore>
+        <element name="etagere">
+            <attribute name="type"/>
+            <optional>
+                <attribute name="poussiere" >
+                    <data type="boolean"/>
+                </attribute>
+            </optional>
+            <optional>
+                <oneOrMore>
+                    <element name="livre">
+                        <attribute name="isbn">
+                            <data type="int"/>
+                        </attribute>
+                        <attribute name="prix">
+                            <data type="decimal"/>
+                        </attribute>
+                            <element name="titre"><text/></element>
+                                <element name="auteur">
+                                    <choice>
+                                        <group>
+                                            <element name="nom"><text/></element>
+                                            <element name="prenom"><text/></element>
+                                        </group>
+                                        <group>
+                                            <attribute name="nom">
+                                                <data type="string"/>
+                                            </attribute>
+                                            <attribute name="prenom">
+                                                <data type="string"/>
+                                            </attribute>
+                                        </group>
+                                        <group>
+                                            <element name="prenom"><text/></element>
+                                            <element name="nom"><text/></element>
+                                        </group>
+                                    </choice>
+                                </element>  
+                    </element>
+                </oneOrMore>
+                <optional>
+                    <element name="magazine">
+                        <attribute name="isbn"/>
+                        <attribute name="prix"/>
+                    </element>
+                </optional>
+            </optional>
+        </element>
+    </oneOrMore>
+</element>
