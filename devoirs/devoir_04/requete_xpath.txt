@@ -1,0 +1,27 @@
+1. /pdv_liste
+2. /pdv_liste/pdv/child::* 
+OR //pdv/child::* 
+OR child::*
+3. /pdv_liste/pdv/ville[text()]
+4. /pdv_liste/pdv[46]       pas sûre
+5. /pdv_liste/pdv/prix[last()]
+6. /pdv_liste/pdv[@id='3150005']
+7. /pdv_liste/pdv[services/service[not(contains(data(), 'GPL'))]]  
+OR /pdv_liste/pdv[descendant::service[not(contains(data(), 'GPL'))]]
+8. following-sibling::*
+9. //pdv[@cp='16170']/ville
+OR /pdv_liste/pdv[@cp='16170']
+10. //pdv[ouverture[@saufjour="Lundi"]]
+OR /pdv_liste/pdv[ouverture[@saufjour="Lundi"]]
+11. /pdv_liste/pdv[descendant::service[contains(text(), 'Relais colis')]]
+12. //following-sibling::*[position()=10][contains(text(), 'Piste poids lourds')]
+13. //pdv[rupture[@nom="SP95" and @début[contains(data(), '2013-02-04 ')]]]/ville xPath 2.0
+14. //pdv[fermeture[@fin=""]]
+15. //pdv[ville='La Mure'][prix[@nom="E10"]]
+16. count(//pdv)
+17. //pdv/adresse/string-length(.) xPath 2.0
+18. max(//pdv/adresse/string-length(.) ) xPath 2.0
+19. //pdv[ouverture[not(@fin="20:00")]]
+20. //pdv/prix/@nom[lower-case(@nom)] xPath 2.0
+21. for $var in //pdv/@latitude return replace($var, '\.', '--') xPath 2.0
+22. for $data in //pdv/prix/@maj return concat(substring($data, 12, 19), 'T', substring($data, 1, 10))
