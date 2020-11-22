@@ -9,9 +9,9 @@
     </xsl:template>
 
     <xsl:template match="titre">
-        <h1>
+        <head>
             <xsl:value-of select="."/>
-        </h1>
+        </head>
     </xsl:template>
 
 

@@ -82,7 +82,7 @@
     <prix nom="Gazole" id="1" maj="2014-06-13 09:14:25" valeur="1289"/>
     <prix nom="SP95" id="2" maj="2014-06-13 09:14:25" valeur="1529"/>
     <prix nom="SP98" id="6" maj="2014-06-13 09:14:25" valeur="1569"/>
-    <fermeture/>
+    <fermeture>blablah</fermeture>
     <rupture/>
   </pdv>
   <pdv id="1000007" latitude="4620105" longitude="524891" cp="01000" pop="R">
