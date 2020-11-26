@@ -1,5 +1,7 @@
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron">
 
+<sch:ns uri="http://www.tei-c.org/ns/1.0" prefix="t"/>
+
     <!--exo 1-->
 
     <sch:pattern abstract="true" id="structure-minimale">
@@ -8,7 +10,7 @@
         </sch:rule>
     </sch:pattern>
     
-    <sch:pattern is-a="structure-minimale" id="TEI">
+    <sch:pattern is-a="structure-minimale" id="t:TEI">
         <sch:param name="rule1" value="TEI"/>
     </sch:pattern>
 
@@ -20,24 +22,24 @@
         </sch:rule>
     </sch:pattern>
     
-    <sch:pattern is-a="structure-paragr" id="sp">
+    <sch:pattern is-a="structure-paragr" id="t:sp">
         <sch:param name="rule2" value="sp"/>
     </sch:pattern>
 
-    <sch:pattern is-a="structure-paragr" id="projectDesc">
+    <sch:pattern is-a="structure-paragr" id="t:projectDesc">
         <sch:param name="rule2" value="projectDesc"/>
     </sch:pattern>
 
     <!--exo 3-->
 
-    <sch:pattern abstract="true" id="structure-div">
+    <sch:pattern abstract="true" id="t:structure-div">
         <sch:rule context="$rule3">
             <sch:assert test="self::*[child::head]">L'élément <sch:name/> doit avoir obligatoirement un enfant : head.</sch:assert>
             <sch:assert test="count($rule4) > 1">L'élément <sch:name/> doit contenir au moins deux balises 'stage'.</sch:assert>
         </sch:rule>
     </sch:pattern>
 
-     <sch:pattern is-a="structure-div" id="div">
+     <sch:pattern is-a="structure-div" id="t:div">
         <sch:param name="rule3" value="div"/>
         <sch:param name="rule4" value="div/stage"/>
     </sch:pattern>
